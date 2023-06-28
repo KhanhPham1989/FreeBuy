@@ -9,11 +9,11 @@ namespace FreeBuy.Data.Structure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
-        private FreeBuyDbContext dbContext;
+        private FreeBuyDbContext _dbContext;
 
         public FreeBuyDbContext DbContext
         {
-            get { return dbContext ?? (dbContext = dbFactory.Init()); }
+            get { return _dbContext ?? (_dbContext = dbFactory.Init()); }
         }
 
         public UnitOfWork(IDbFactory dbFactory)
@@ -23,7 +23,7 @@ namespace FreeBuy.Data.Structure
 
         public void Commit()
         {
-            dbContext.SaveChanges();
+            DbContext.SaveChanges();
         }
     }
 }
