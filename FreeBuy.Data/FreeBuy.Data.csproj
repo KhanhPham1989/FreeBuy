@@ -49,6 +49,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respository\PostCategoryRespository.cs" />
+    <Compile Include="Respository\PostRespository.cs" />
     <Compile Include="Respository\ProductCategoryRespository.cs" />
     <Compile Include="Respository\ProductRespository.cs" />
     <Compile Include="Structure\DbFactory.cs" />
